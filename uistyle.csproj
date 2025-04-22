@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\add.png" />
+    <None Remove="Resources\close.png" />
+    <None Remove="Resources\images1.jpg" />
+    <None Remove="Resources\images2.jpg" />
+    <None Remove="Resources\left.png" />
+    <None Remove="Resources\right.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+    <PackageReference Include="Extensions.Hosting" Version="2.3.0" />
+    <PackageReference Include="WPF-UI" Version="4.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\add.png" />
+    <Resource Include="Resources\close.png" />
+    <Resource Include="Resources\images1.jpg" />
+    <Resource Include="Resources\images2.jpg" />
+    <Resource Include="Resources\left.png" />
+    <Resource Include="Resources\right.png" />
+  </ItemGroup>
+
+</Project>

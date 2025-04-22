@@ -1,0 +1,33 @@
+﻿<Window x:Class="uistyle.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:uistyle"
+        xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+        mc:Ignorable="d"
+        Title="Some UI"
+        Width="1450"
+        Height="802"
+        MinWidth="900"
+        ui:Design.Background="{DynamicResource ApplicationBackgroundBrush}"
+        ui:Design.Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+        WindowStartupLocation="CenterScreen"
+        >
+    <Grid>
+        <ui:NavigationView
+            x:Name="NavigationView"
+            Padding="42,0,42,0"
+            FrameMargin="0"
+            IsPaneToggleVisible="True"
+            MenuItemsSource="{Binding ViewModel.MenuItems}"
+            OpenPaneLength="310"
+            PaneClosed="NavigationView_OnPaneClosed"
+            PaneDisplayMode="Left"
+            PaneOpened="NavigationView_OnPaneOpened"
+            SelectionChanged="OnNavigationSelectionChanged"
+            Transition="FadeInWithSlide">
+            
+        </ui:NavigationView>
+    </Grid>
+</Window>
